@@ -206,7 +206,7 @@ const MuiVirtualizedAccordionTable: React.FC = () => {
     <Box sx={{ p: 3, bgcolor: 'grey.50', minHeight: '100vh' }}>
       {/* Header */}
       <Paper sx={{ p: 3, mb: 3, borderRadius: 2 }}>
-        <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', mb: 3 }}>
+        <Box sx={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', mb: 3 }}>
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
             <Avatar sx={{ bgcolor: 'primary.main', width: 48, height: 48 }}>
               <People />
@@ -220,7 +220,7 @@ const MuiVirtualizedAccordionTable: React.FC = () => {
               </Typography>
             </Box>
           </Box>
-          <Box sx={{ alignItems: 'center', gap: 2 }}>
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
             <Chip
               icon={<Speed />}
               label="Виртуализация"
