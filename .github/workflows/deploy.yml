@@ -8,18 +8,27 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          path: .  # ← Клонировать в текущую директорию
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: 'npm'
 
       - name: Install dependencies
         run: npm install
 
       - name: Build
-        run: npm run build
+        run: |
+          pwd
+          ls -la
+          ls -la src
+          npm run build
+        # Отладка: убедись, что видишь папку src/
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
