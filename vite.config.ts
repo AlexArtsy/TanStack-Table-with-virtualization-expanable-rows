@@ -7,5 +7,5 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
-  base: 'TanStack-Table-with-virtualization-expanable-rows',
+  base: '/TanStack-Table-with-virtualization-expanable-rows/',
 });
