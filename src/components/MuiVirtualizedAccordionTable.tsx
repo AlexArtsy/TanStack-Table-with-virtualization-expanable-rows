@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import { useVirtualizer } from '@tanstack/react-virtual';
 import {
   useReactTable,
@@ -220,7 +220,7 @@ const MuiVirtualizedAccordionTable: React.FC = () => {
               </Typography>
             </Box>
           </Box>
-          <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+          <Box sx={{ alignItems: 'center', gap: 2 }}>
             <Chip
               icon={<Speed />}
               label="Виртуализация"
